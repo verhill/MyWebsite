@@ -1,0 +1,388 @@
+html {
+    scroll-behavior: smooth;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+/* Header med gradient och skugga */
+.gradient-header {
+    background: linear-gradient(90deg, #1e3a8a, #2563eb);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsiv grid-layout för kompetenser */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    justify-content: center;
+    align-items: start;
+    padding: 2rem 0;
+}
+
+/* Stilar för varje kompetenskort */
+.skill-card {
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Ikoner i kompetenskorten */
+.skill-card .icon img {
+    margin-bottom: 1rem;
+    width: 64px;
+    height: 64px;
+}
+
+/* Hover-effekter för kompetenskort */
+.skill-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Progress bar styles */
+.skill-bar {
+    margin-bottom: 1.5rem;
+}
+.progress-bar {
+    background-color: #e5e7eb;
+    border-radius: 9999px;
+    height: 1.25rem;
+    position: relative;
+    overflow: hidden;
+}
+.progress-bar::before {
+    content: "";
+    display: block;
+    height: 100%;
+    width: 0%; /* Initial width for animation */
+    background: linear-gradient(90deg, #60a5fa, #2563eb); /* Blue gradient */
+    border-radius: 9999px;
+    position: absolute;
+    transition: width 2s ease-in-out; /* Smooth animation */
+}
+
+/* Anpassad färg för Backend-staplar */
+.skill-card.bg-green-100 .progress-bar::before {
+    background: linear-gradient(90deg, #34d399, #059669); /* Green gradient */
+}
+
+/* Anpassad färg för Databas-staplar */
+.skill-card.bg-orange-100 .progress-bar::before {
+    background: linear-gradient(90deg, #fb923c, #f97316); /* Orange gradient */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Projektkort med hover-effekter */
+.project-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+.project-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+.project-card:hover .project-image {
+    transform: scale(1.1);
+}
+
+/* Knappstilar och hover-effekter */
+.btn-hover {
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.btn-hover:hover {
+    background-color: #fb923c;
+    transform: scale(1.05);
+}
+/* Tidslinje grundlayout */
+.timeline {
+    position: relative;
+    margin: 2rem 0;
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem; /* Avstånd mellan tidslinjepunkter */
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%; /* Linjen centreras */
+    width: 4px;
+    background-color: #e5e7eb;
+    z-index: 0;
+}
+
+/* Tidslinjepunkter */
+.timeline-item {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr; /* Tre kolumner: vänster, ikon, höger */
+    align-items: center; /* Vertikalt centrerar textrutorna och projektrutorna */
+    position: relative;
+    width: 100%;
+    gap: 1rem; /* Jämnt avstånd mellan ikon och rutorna */
+}
+
+/* Ikonen på linjen */
+.timeline-icon {
+    grid-column: 2; /* Ikonen placeras i mitten */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    background-color: #358adf;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+
+
+.timeline-icon img {
+    width: 40px;
+    height: 40px;
+}
+
+/* Textrutor */
+.timeline-content {
+    max-width: 300px;
+    padding: 1rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertikalt centrera texten */
+    text-align: left;
+    margin: 0 auto;
+}
+
+/* Projektrutor i tidslinjen */
+.timeline-project {
+    max-width: 300px;
+    padding: 1rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    margin: 0 auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* För hover-effekt */
+}
+.timeline-project img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+    transition: transform 0.3s ease; /* För bildens zoom-effekt */
+}
+.timeline-project:hover {
+    transform: scale(1.05); /* Förstorar hela projektrutan */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Ökar skuggan vid hover */
+}
+.timeline-project:hover img {
+    transform: scale(1.1); /* Zoomar in bilden vid hover */
+}
+
+.timeline-tech {
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+.timeline-tech img {
+    width: 50px;
+    height:S 50px;
+    border-radius: 20%;
+    background-color: #e5e7eb;
+    padding: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+
+/* Placering av textrutor och projektrutor */
+.timeline-item:nth-child(odd) .timeline-content {
+    grid-column: 1; /* Textrutan till vänster */
+    margin-right: 10rem; /* Samma avstånd till ikonen */
+    text-align: right;
+}
+.timeline-item:nth-child(odd) .timeline-project {
+    grid-column: 3; /* Projektrutan till höger */
+    margin-left: 10rem; /* Samma avstånd till ikonen */
+    text-align: left;
+}
+.timeline-item:nth-child(even) .timeline-content {
+    grid-column: 3; /* Textrutan till höger */
+    margin-left: 10rem; /* Samma avstånd till ikonen */
+    text-align: left;
+}
+.timeline-item:nth-child(even) .timeline-project {
+    grid-column: 1; /* Projektrutan till vänster */
+    margin-right: 10rem; /* Samma avstånd till ikonen */
+    text-align: right;
+}
+
+/* Responsiv design */
+@media (max-width: 768px) {
+    .timeline {
+        gap: 2rem;
+    }
+
+    .timeline-item {
+        grid-template-columns: 1fr; /* Stapla allt i en kolumn */
+        text-align: center;
+    }
+
+    .timeline-content, .timeline-project {
+        grid-column: auto;
+        max-width: 100%; /* Full bredd */
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .timeline-icon {
+        grid-column: auto;
+        margin: 1rem auto;
+    }
+}
+
+
+
+
+
+/* Fade-in animation */
+.timeline-item {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.timeline-item.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.timeline-icon img {
+    border-radius: 50%;
+}
+/* Projektrutans fot */
+.project-footer {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Avstånd mellan bild och knapp */
+    margin-top: 1rem;
+}
+
+/* Bild bredvid knappen */
+.project-footer .techline-icon {
+    width: 30px; /* Bildens bredd */
+    height: 30px; /* Bildens höjd */
+    border-radius: 50%; /* Rund form */
+    background-color: #e5e7eb; /* Lätt bakgrundsfärg */
+    padding: 5px; /* Mellanrum inuti ikonen */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Skugga för att matcha design */
+}
+
+#contact {
+    background-color: #f7fafc; /* Ljus bakgrund för sektionen */
+}
+
+#contact h2 {
+    font-size: 2rem;
+    color: #333; /* Textfärg för rubriken */
+}
+
+.btn-hover {
+    display: inline-block;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 0.375rem; /* Rundade hörn */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-hover:hover {
+    transform: scale(1.05);
+}
+
+.bg-blue-500 {
+    background-color: #3b82f6; /* Blå för email-knappen */
+}
+
+.bg-blue-700 {
+    background-color: #1d4ed8; /* Mörkblå för LinkedIn */
+}
+
+.bg-gray-800 {
+    background-color: #1f2937; /* Mörkgrå för GitHub */
+}
+
+.text-white {
+    color: white; /* Vit text på knapparna */
+}
+
+.hover\:bg-blue-600:hover {
+    background-color: #2563eb; /* Ljusare blå vid hover för email */
+}
+
+.hover\:bg-blue-800:hover {
+    background-color: #1e40af; /* Ljusare blå vid hover för LinkedIn */
+}
+
+.hover\:bg-gray-900:hover {
+    background-color: #111827; /* Ljusare grå vid hover för GitHub */
+}
+
+.transition {
+    transition: all 0.3s ease;
+}
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.box {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Justera så att en sektion sträcker sig över hela raden */
+.box:nth-child(5) {
+    grid-column: span 2;
+}

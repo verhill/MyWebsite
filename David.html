@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Min Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-white text-gray-800">
+
+    
+    <!-- Header -->
+    <header class="gradient-header text-white py-4">
+        <div class="container mx-auto flex justify-between items-center px-4">
+            <h1 class="text-2xl font-bold" data-i18n="name">David Hillver</h1>
+            <nav class="flex items-center space-x-4">
+                <ul class="flex space-x-4">
+                    <li><a href="#about" class="hover:text-orange-400" data-i18n="about">Om mig</a></li>
+                    <li><a href="#timeline" class="hover:text-orange-400" data-i18n="timeline">Tidslinje</a></li>
+                    <li><a href="#projects" class="hover:text-orange-400" data-i18n="projects">Projekt</a></li>
+                    <li><a href="#contact" class="hover:text-orange-400" data-i18n="contact">Kontakt</a></li>
+                </ul>
+                <!-- Språkväljare -->
+                <div class="flex space-x-2">
+                    <button id="lang-sv" data-i18n="language-sv">
+                        <img src="svensk.png" alt="Svenska" class="w-6 h-6">
+                    </button>
+                    <button id="lang-en" data-i18n="language-en">
+                        <img src="uk.png" alt="English" class="w-6 h-6">
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+    
+    
+
+    <!-- Om mig -->
+    <section id="about" class="py-12 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-4" data-i18n="aboutTitle">Om mig</h2>
+            <p class="text-lg" data-i18n="aboutDescription">Jag är en systemvetenskapsstudent vid Örebro universitet med ett stort intresse för IT. Min passion ligger inom backendutveckling och databashantering. Jag strävar efter att bidra till innovativa lösningar och utveckla mina färdigheter inom teknikens värld.</p>
+        </div>
+    </section>
+    
+
+        <!-- Tidslinje -->
+        <section id="timeline" class="py-12"> 
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold mb-6 text-center" data-i18n="timeline_title">Min Utveckling</h2>
+                <div class="timeline">
+           
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3 class="timeline-date">2021</h3>
+                            <p data-i18n="timeline_2021_1">Började på civilingenjörsprogrammet och lärde mig grunderna i programmering.</p>
+                            <p data-i18n="timeline_2021_2">Läste Python, C och SQL samt grundläggande nätverkslära.</p>
+                            <div class="timeline-tech">
+                                <img src="Python.svg.png" alt="Python">
+                                <img src="myCLogo.png" alt="C">
+                                <img src="mimer-removebg-preview.png" alt="SQL">
+                            </div>
+                        </div>
+                        <div class="timeline-icon">
+                           
+                        </div>
+                        <div class="timeline-project">
+                            <img src="pythonProj.png" alt="Projekt Bild">
+                            <p data-i18n="timeline_2021_3">Mitt första projekt. Ett grupparbete där uppgiften var att skapa ett data spel med python och pygame</p>
+                            <div class="project-footer">
+                                <a href="https://github.com/verhill/NotSpaceInvaders" class="btn-hover mt-2 block text-blue-600 hover:underline" data-i18n="github">Visa på GitHub</a>
+                                <img src="Python.svg.png" alt="Techline Icon" class="techline-icon">
+                            </div>
+                        </div>                        
+                    </div>
+                 
+                    <div class="timeline-item">
+                        <div class="timeline-project">
+                            <img src="mib.projectlogo.png" alt="Projekt Bild">
+                            <p data-i18n="timeline_2023_1">Första objektorienterade projektet jag gjort som gick ut på att vi som grupp skulle skapa ett administrativt system för organisationen MIB.</p>
+                            <div class="project-footer">
+                                <a href="https://github.com/verhill/MiBProject" class="btn-hover mt-2 block text-blue-600 hover:underline" data-i18n="github">Visa på GitHub</a>
+                                <img src="upJava.webp" alt="Techline Icon" class="techline-icon">
+                            </div>
+                        </div>
+                        <div class="timeline-icon">
+                            
+                        </div>
+                        <div class="timeline-content">
+                            <h3 class="timeline-date">2023</h3>
+                            <p data-i18n="timeline_2023_2">Bytte till systemvetenskapsprogrammet och fokuserade mer på programmering.</p>
+                            <p data-i18n="timeline_2023_3">Lärde mig SQL och objektorienterad programmering i Java.</p>
+                            <div class="timeline-tech">
+                                <img src="Java_(programming_language)-Logo.wine.png" alt="Java">
+                                <img src="upMySql.png" alt="SQL">
+                            </div>
+                        </div>
+                    </div>
+                 
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3 class="timeline-date">2024</h3>
+                            <p data-i18n="timeline_2024_1">Fördjupade mig inom front-end utveckling (HTML, CSS, JavaScript, Vue.js) och back-end med C# och SQL.</p>
+                            <p data-i18n="timeline_2024_2">Började även arbeta med .NET.</p>
+                            <div class="timeline-tech">
+                                <img src="uHtml.png" alt="HTML">
+                                <img src="css3-logo-png-transparent.png" alt="CSS">
+                                <img src="JavaScript-Logo.png" alt="JavaScript">
+                                <img src="vue.png" alt="Vue.js">
+                                <img src="upCs.png" alt="Vue.js">
+                                <img src="sqlServ.png" alt="Vue.js">
+                            </div>
+                        </div>
+                        <div class="timeline-icon">
+                            
+                        </div>
+                        <div class="timeline-project">
+                            <img src="csProj.png" alt="Projekt Bild">
+                            <p data-i18n="timeline_2024_3">Byggde en komplett webbapplikation med Vue.js och .NET.</p>
+                            <div class="project-footer">
+                                <a href="https://github.com/verhill/PodcastLibrary" class="btn-hover mt-2 block text-blue-600 hover:underline" data-i18n="github">Visa på GitHub</a>
+                                <img src="upCs.png" alt="Techline Icon" class="techline-icon">
+                            </div>
+                        </div>
+                    </div>
+                  
+                    <div class="timeline-item">
+                        <div class="timeline-project">
+                            <img src="CvWeb.png" alt="Projekt Bild">
+                            <p data-i18n="timeline_2025_1">Hemsida som hanterar CV:n och Projekt där man kan se olika användares CV:n och Projekt de deltagit i</p>
+                            <div class="project-footer">
+                                <a href="#" class="btn-hover mt-2 block text-blue-600 hover:underline" data-i18n="github">Visa på GitHub</a>
+                                <img src="netlogo.png" alt="Techline Icon" class="techline-icon">
+                                <img src="upCs.png" alt="Techline Icon" class="techline-icon">
+                            </div>
+                        </div>
+                        <div class="timeline-icon">
+                           
+                        </div>
+                        <div class="timeline-content">
+                            <h3 class="timeline-date">2025</h3>
+                            <p data-i18n="timeline_2025_2">Fördjupade utveckling av applikationer och utvecklade en hemsida som hanterar personers CV:n och projekt där man som användare kan söka efter andra användare och deras CV:n och se projekt de deltagit i</p>
+                            <div class="timeline-tech">
+                                <img src="netlogo.png" alt="Docker">
+                                <img src="upCs.png" alt="Python">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        
+        
+    
+
+    <!-- Projekt -->
+    <section id="projects" class="py-12 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-6" data-i18n="projects_title">Mina egna Projekt</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              
+                <div class="project-card">
+                    <img src="EgenHemsida.png" alt="Projektbild" class="project-image">
+                    <div class="p-4">
+                        <h3 class="text-xl font-bold" data-i18n="project_1_name">Projekt Namn</h3>
+                        <p class="text-gray-700" data-i18n="project_1_description">
+                            Ett projekt där uppgiften var att skapa en egen påhittad konsultsida. Projekten som finns med i portföljen på denna sida har jag även skapat själv.
+                        </p>
+                        <div class="project-footer">
+                            <a href="https://github.com/verhill/PersonalWebsite" class="btn-hover mt-2 block text-blue-600 hover:underline" data-i18n="project_1_github">Visa på GitHub</a>
+                            <img src="uHtml.png" alt="Techline Icon" class="techline-icon">
+                            <img src="csharp.jpg" alt="Techline Icon" class="techline-icon">
+                            <img src="JavaScript-Logo.png" alt="Techline Icon" class="techline-icon">
+                            <img src="vue.png" alt="Techline Icon" class="techline-icon">
+                        </div>
+                    </div>
+                </div>
+          
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- Kontakt -->
+    <section id="contact" class="py-12 bg-gray-50">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-6" data-i18n="contact_title">Kontakta mig!</h2>
+            <p class="mb-6" data-i18n="contact_desc">Ständigt på jakt efter nästa lärorika projekt – hör av dig!</p> <!-- Flyttad p här -->
+            <div class="flex justify-center space-x-6">
+                <a href="mailto:hillver.david@gmail.com" class="btn-hover bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 transition" target="_blank" data-i18n="contact_email">Email</a>
+                <a href="https://www.linkedin.com/in/david-hillver-015510303/" class="btn-hover bg-blue-700 text-white py-2 px-4 rounded-md hover:bg-blue-800 transition" target="_blank" data-i18n="contact_linkedin">LinkedIn</a>
+                <a href="https://github.com/verhill" class="btn-hover bg-gray-800 text-white py-2 px-4 rounded-md hover:bg-gray-900 transition" target="_blank" data-i18n="contact_github">GitHub</a>
+            </div>
+        </div>
+    </section>
+    
+    
+    
+
+  
+    
+    <script src="script.js"></script>
+</body>
+</html>
